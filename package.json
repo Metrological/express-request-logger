@@ -1,0 +1,20 @@
+{
+  "author": "Metrological",
+  "private": false,
+  "name": "express-request-logger",
+  "description": "Logs express pending, slow, error and completed requests to redis.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Metrological/express-request-logger"
+  },
+  "main": "./lib/express-request-logger",
+  "keywords": [
+    "express",
+    "redis",
+    "log"
+  ],
+  "dependencies": {
+    "lodash": "~2.4.1",
+  }
+}
