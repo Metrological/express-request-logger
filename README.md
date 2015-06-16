@@ -52,3 +52,19 @@ if (res.rLog) {
 	res.rLog.update();
 }
 ```
+
+3. To ignore some request:
+
+```javascript
+app.use(function(req, res, next) {
+	if (res.rLog) {
+		if (req.path == '/') {
+			// Ignore nagios calls.
+			res.rLog.ignore();
+		}
+	}
+});
+```
+
+Notice that if the request has already been logged at the moment of calling .ignore, the key is not deleted from redis.
+Preferably call ignore as soon as possible, for example in middleware appended directly after the request logger itself.
