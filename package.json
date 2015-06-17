@@ -3,7 +3,7 @@
   "private": false,
   "name": "express-request-logger",
   "description": "Logs express pending, slow, error and completed requests to redis.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/Metrological/express-request-logger"
