@@ -15,6 +15,7 @@
     "log"
   ],
   "dependencies": {
-    "lodash": "*"
+    "lodash": "*",
+    "redis": "~0.10.1"
   }
 }

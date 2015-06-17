@@ -2,8 +2,9 @@ Express Request Logger
 ----------------------
 
 Logs express pending, slow, error and completed requests to redis.
-
-Use with redis module https://github.com/mranney/node_redis.
+The redis server is fixed at the Metrological redis test server for easy inclusion into Metrological projects.
+Notice that logging is only performed when NODE_ENV is either production or test.
+In case of NODE_ENV dev or backendDev, logs are written to redis at localhost:6379.
 
 Usage:
 
@@ -12,7 +13,6 @@ Usage:
 ```javascript
 require('express-request-logger').configure(
 	app,
-	getRedisClient,
 	{projectName: "provisioningBackend"}
 );
 
